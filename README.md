@@ -1,17 +1,17 @@
-# Slack Appender for log4js-node
+# Discord Appender for log4js-node
 
-Sends log events to a [slack](https://slack.com) channel. This is an optional appender for use with [log4js](https://log4js-node.github.io/log4js-node/).
+Sends log events to a [Discord](https://discord.com) channel. This is an optional appender for use with [log4js](https://log4js-node.github.io/log4js-node/).
 ```bash
-npm install @log4js-node/slack
+npm install log4js-discord
 ```
 
 ## Configuration
 
-* `type` - `@log4js-node/slack`
-* `token` - `string` - your Slack API token (see the slack and slack-node docs)
-* `channel_id` - `string` - the channel to send log messages
+* `type` - `log4js-discord`
+* `url` - `string` -your Discord Webhook URL (see the discord docs)
 * `icon_url` - `string` (optional) - the icon to use for the message
 * `username` - `string` - the username to display with the message
+* `color` - `string` (optional) - the color of the embed message
 * `layout` - `object` (optional, defaults to `basicLayout`) - the layout to use for the message (see [layouts](layouts.md)).
 
 ## Example
@@ -20,9 +20,8 @@ npm install @log4js-node/slack
 log4js.configure({
   appenders: {
     alerts: {
-      type: '@log4js-node/slack',
-      token: 'abc123def',
-      channel_id: 'prod-alerts',
+      type: 'log4js-discord',
+      url: 'https://discord.com/api/webhooks/...',
       username: 'our_application'
     }
   },
@@ -31,4 +30,5 @@ log4js.configure({
   }
 });
 ```
-This configuration will send all error (and above) messages to the `prod-alerts` slack channel, with the username `our_application`.
+
+This configuration will send all error (and above) messages, with the username `our_application`.
