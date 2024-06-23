@@ -6,7 +6,7 @@ export interface DiscordAppender {
         iconUrl?: string;
         // the username to display with the message
         username: string;
-        // the channel to send the message to
+        // the color of the embed message
         color: string;
         // (defaults to basicLayout) - the layout to use for the message.
         layout?: Layout;
