@@ -11,7 +11,6 @@ npm install log4js-discord
 * `url` - `string` -your Discord Webhook URL (see the discord docs)
 * `icon_url` - `string` (optional) - the icon to use for the message
 * `username` - `string` - the username to display with the message
-* `color` - `string` (optional) - the color of the embed message
 * `layout` - `object` (optional, defaults to `basicLayout`) - the layout to use for the message (see [layouts](layouts.md)).
 
 ## Example
